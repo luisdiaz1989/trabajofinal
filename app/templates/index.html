@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Análisis de Películas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 500px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: block;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Proyecto de Análisis de Películas</h1>
+        <a href="/top_movies" class="button">🎬 Top 10 películas</a>
+        <a href="/scatter_plot" class="button">📊 Calificaciones vs IMDb</a>
+        <a href="/generos" class="button">🎭 Distribución por género</a>
+        <a href="/calificar" class="button">⭐ Calificar película</a>
+        <a href="https://github.com/luisdiaz1989/trabajofinal.git" class="button" target="_blank">📁 Ver repositorio GitHub</a>
+        <footer>
+            Hecho con Flask · Google Colab · SQLite · Pandas · Matplotlib
+        </footer>
+    </div>
+</body>
+</html>

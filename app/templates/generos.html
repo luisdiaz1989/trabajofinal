@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Distribución de películas por género principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .description {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            box-shadow: 0 0 10px #ccc;
+            border-radius: 8px;
+        }
+
+        .btn-container {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Distribución de películas por género principal</h2>
+        <div class="description">
+           
+        </div>
+        <img src="data:image/png;base64,{{ plot_img }}" alt="Gráfico Géneros" />
+
+        <div class="btn-container">
+            <a href="{{ url_for('index') }}" class="btn">Inicio</a>
+            <a href="{{ url_for('top_movies') }}" class="btn">Top 10 Películas</a>
+            <a href="{{ url_for('scatter_plot') }}" class="btn">Calificaciones vs IMDb</a>
+        </div>
+    </div>
+</body>
+</html>

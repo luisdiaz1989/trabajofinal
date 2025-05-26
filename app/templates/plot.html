@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f8ff; }
+        h2 { color: #222; }
+        p { font-size: 1.1em; line-height: 1.5em; max-width: 700px; }
+        img { max-width: 90%; height: auto; margin-top: 20px; box-shadow: 0 0 10px #ccc; }
+        a { display: inline-block; margin-top: 30px; font-weight: bold; color: #0077cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .description { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h2>{{ title }}</h2>
+    <div class="description">{{ description|safe }}</div>
+    <img src="data:image/png;base64,{{ plot_img }}" alt="Gráfico" />
+    <br />
+    <a href="{{ url_for('index') }}">&larr; Volver al inicio</a>
+</body>
+</html>

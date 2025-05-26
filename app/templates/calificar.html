@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calificar una película</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        select, input[type=number] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Califica una película</h2>
+        <form method="POST">
+            <label for="pelicula">Selecciona una película:</label>
+            <select name="pelicula" required>
+                {% for peli in peliculas %}
+                    <option value="{{ peli }}">{{ peli }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="calificacion">Tu calificación (1-10):</label>
+            <input type="number" name="calificacion" min="1" max="10" required>
+
+            <button type="submit">Guardar calificación</button>
+        </form>
+    </div>
+</body>
+</html>
